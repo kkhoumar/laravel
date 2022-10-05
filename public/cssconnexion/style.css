@@ -1,0 +1,34 @@
+h1{
+    color:red;
+    font-size: 35px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2{
+    font-size: 35px;
+    color: red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div input[type=password],input[type=text]{
+    font-size: 20px;
+    margin-top: 2px;
+
+}
+input[type=submit]{
+    margin-top: 15px;
+    font-size: 24px;
+}
+label{
+    font-size: 25px;
+    
+}
+body{
+    background-color: antiquewhite;
+
+
+}
+
+.row_style{
+    margin-top:160px;
+}

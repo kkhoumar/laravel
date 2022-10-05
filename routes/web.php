@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//les routes de la administrateur
+route::get('/index',[AdminController::class,'index']);
+route::post('/store',[AdminController::class,'store'])->name('admin.store');
+
+route::get('/dashboard',[DashboardController::class,'index']);
