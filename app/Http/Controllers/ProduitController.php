@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Admin;
-use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class ProduitController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +13,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        return view('admin.ajouterproduit');
     }
 
     /**
@@ -28,30 +26,15 @@ class AdminController extends Controller
         //
     }
 
-    //insertion d'un administrateur
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'email' => 'required|max:255',
-            'password' => 'required'
-        ]);
-
-        $admin =Admin::where('email',$request->input('email'))->first();
-        $password = Admin::where('password',$request->input('password'))->first();
-
-     if($admin && $password)
-     {
-        return view('admin.dashboard')->with('status','connexion avec succès');
-
-       
-     }elseif($admin || $password){
-        
-        return back()->with('status','Le mot de passe ou l\'adresse email est incorrect');
-     }
-     else{
-          return back()->with('status','vous ne pouvez pas ouvrir de session en tant qu’administrateur ');
-     }
-       
+        //
     }
 
     /**
