@@ -16,7 +16,8 @@ class CategorieController extends Controller
      */
     public function index()
     {
-       return view('admin.ajoutercategorie');
+       
+       return view('admin.ajoutercategorie')
     }
 
     /**

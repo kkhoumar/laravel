@@ -41,7 +41,7 @@
               @endif
           <div>
               <label for="email">Adresse Email</label>
-              <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email">
+              <input type="email" name="email" class="form-control" id="email" value="{{ old('email') }}">
           </div>
           
           <div>

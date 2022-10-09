@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categorie;
+use App\Models\Produit;
 use Illuminate\Http\Request;
 
 class ProduitController extends Controller
@@ -13,7 +15,8 @@ class ProduitController extends Controller
      */
     public function index()
     {
-        return view('admin.ajouterproduit');
+        $category = Categorie::all();
+        return view('admin.ajouterproduit')->with('category',$category);;
     }
 
     /**
@@ -34,7 +37,13 @@ class ProduitController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $validated =$request->validate([
+        "nom"=>"required",
+        "categorie_produit"=>"required",
+        "prix"=>"required",
+        "description"=>"required",
+      ]);
+      $produit = new Produit();
     }
 
     /**

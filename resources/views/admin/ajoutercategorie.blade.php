@@ -18,9 +18,9 @@
                           <li>{{ $error }}</li>
                       @endforeach
                   </ul>
-                    </div>
+                </div>
               @endif
-          <div>
+    <div>
      
     <div>
         <label for="">nom de la categorie</label>

@@ -19,6 +19,7 @@ class CreateProduitsTable extends Migration
             $table->integer('prix');
             $table->String('decription');
             $table->string('image');
+            $table->string('categorie_produit');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
